@@ -1,0 +1,4 @@
+4000 -> user not found
+4001 -> Invalid password
+4002 -> userName already exists
+4003 -> Email already exists
