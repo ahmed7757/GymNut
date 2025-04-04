@@ -3,7 +3,7 @@ import { UserContext } from "../contexts/User"
 import { useContext } from "react"
 import axios from "../api/axios"
 import { object } from "prop-types";
-const trackFoodURL = "/user/setTrackedFood";
+const trackFoodURL = "/user/trackedFood";
 const Food = (props) => {
     const [grams, setGrams] = useState(100)
     const [food, setFood] = useState({})

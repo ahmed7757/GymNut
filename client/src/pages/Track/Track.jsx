@@ -16,7 +16,7 @@ const Track = () => {
             if (e.target.value === '') {
                 setFoodItems([]);
             } else {
-                const response = await axios.get(`/user/foods/${e.target.value}`, {
+                const response = await axios.get(`/user/food/${e.target.value}`, {
                     headers: {
                         'Authorization': `Bearer ${loggedData.loggedUser}`
                     },
@@ -24,12 +24,13 @@ const Track = () => {
                         page: page,
                         limit: limit
                     }
-                })
+                });
                 let data = await response.data;
-                setFoodItems(data.food);
+                setFoodItems(data.food || []);
             }
         } catch (err) {
             console.log(err);
+            setFoodItems([]);
         }
     }
 
